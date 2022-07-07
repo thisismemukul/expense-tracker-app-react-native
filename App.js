@@ -12,7 +12,13 @@ const App = () => {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="BottomTabs" component={BottomTabs} />
+          <Stack.Screen 
+            name="BottomTabs" 
+            component={BottomTabs}
+            options={{
+              headerShown: false
+            }}
+            />
           <Stack.Screen name="ManageExpense" component={ManageExpense} />
         </Stack.Navigator>
       </NavigationContainer>
