@@ -12,7 +12,7 @@ const BottomTabs = () => {
     const BottomTabs = createBottomTabNavigator();
     return (
         <BottomTabs.Navigator 
-            screenOptions={({ route }) => ({
+            screenOptions={({ route, navigation }) => ({
             tabBarIcon: ({ focused, color, size }) => {
                 let iconName;
                 let rn = route.name;
@@ -23,7 +23,7 @@ const BottomTabs = () => {
                 }
                 return <Ionicons name={iconName} size={size} color={color} />;
             },
-            headerRight:  ({tintColor})=><IconButton icon="add" size={28} color={tintColor} onPress={()=>{}}/>,
+            headerRight:  ({tintColor})=><IconButton icon="add" size={28} color={tintColor} onPress={()=>{ navigation.navigate('ManageExpense')}}/>,
             headerStyle: { backgroundColor: GlobalStyles.COLORS.background },
             headerTintColor: GlobalStyles.COLORS.dark,
             tabBarStyle: {
