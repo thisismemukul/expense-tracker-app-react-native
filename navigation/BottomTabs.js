@@ -23,8 +23,8 @@ const BottomTabs = () => {
                 }
                 return <Ionicons name={iconName} size={size} color={color} />;
             },
-            headerStyle: { backgroundColor: GlobalStyles.COLORS.primary },
-            headerTintColor: GlobalStyles.COLORS.white,
+            headerStyle: { backgroundColor: GlobalStyles.COLORS.background },
+            headerTintColor: GlobalStyles.COLORS.dark,
             tabBarStyle: {
                 backgroundColor: GlobalStyles.COLORS.background,
                 height: 60,
