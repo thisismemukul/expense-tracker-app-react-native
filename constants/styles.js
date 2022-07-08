@@ -13,6 +13,7 @@ export const GlobalStyles = {
         dark: "#424874",
         white: "#FFFFFF",
         light: "#FFFFFF",
+        gray: "#ACB8C2",
         icons: "#424874"
     }
 

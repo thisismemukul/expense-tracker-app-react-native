@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import RecentExpenses from '../screens/RecentExpenses';
 import AllExpenses from '../screens/AllExpenses';
 import { GlobalStyles } from '../constants/styles';
-
+import IconButton from '../components/UI/IconButton';
 
 const BottomTabs = () => {
     const BottomTabs = createBottomTabNavigator();
@@ -23,6 +23,7 @@ const BottomTabs = () => {
                 }
                 return <Ionicons name={iconName} size={size} color={color} />;
             },
+            headerRight:  ({tintColor})=><IconButton icon="add" size={28} color={tintColor} onPress={()=>{}}/>,
             headerStyle: { backgroundColor: GlobalStyles.COLORS.background },
             headerTintColor: GlobalStyles.COLORS.dark,
             tabBarStyle: {
