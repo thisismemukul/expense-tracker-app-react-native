@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { Ionicons } from '@expo/vector-icons';
+import { useContext } from 'react';
+
 import ExpensesOutput from '../components/ExpensesOutput/ExpensesOutput';
-const AllExpenses = () => {
-  return <ExpensesOutput expensesPeriod="Total" />
+import { ExpensesContext } from '../store/expenses-context';
+
+function AllExpenses() {
+  const expensesCtx = useContext(ExpensesContext);
+
+  return (
+    <ExpensesOutput expenses={expensesCtx.expenses} expensesPeriod="Total" fallbackText="No registered expenses found!" />
+  );
 }
 
-export default AllExpenses
-
-const styles = StyleSheet.create({})
+export default AllExpenses;
