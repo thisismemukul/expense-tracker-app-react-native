@@ -14,7 +14,8 @@ export const GlobalStyles = {
         white: "#FFFFFF",
         light: "#FFFFFF",
         gray: "#ACB8C2",
-        icons: "#424874"
+        icons: "#424874",
+        error: "#ff0000"
     }
 
 };
